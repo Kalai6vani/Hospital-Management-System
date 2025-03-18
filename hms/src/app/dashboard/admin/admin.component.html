@@ -1,0 +1,107 @@
+<body>
+  <header class="header">
+      <h1>HospEase Admin Dashboard</h1>
+  </header>
+  <div class="container mt-4">
+      <!-- Logout Button -->
+      <div class="text-end">
+          <button class="btn btn-danger" (click)="logout()">Logout</button>
+      </div>
+
+    <h3> Hospitals</h3>
+      <button class="btn btn-primary" (click)="openModal('Hospital')">Add Hospital</button>
+      <table class="table table-bordered mt-2">
+          <tr><th>Name</th><th>Address</th><th>Actions</th></tr>
+          <tr *ngFor="let hospital of hospitals">
+              <td>{{ hospital.name }}</td>
+              <td>{{ hospital.address }}</td>
+              <td>
+                  <button class="btn btn-warning btn-sm" (click)="openModal('Hospital', hospital)">Edit</button>
+                  <button class="btn btn-danger btn-sm" (click)="deleteData('Hospital', hospital.id)">Delete</button>
+              </td>
+          </tr>
+      </table>
+
+      <!-- Assets Table -->
+      <h3>Assets</h3>
+      <button class="btn btn-primary" (click)="openModal('HospitalAsset')">Add Asset</button>
+      <table class="table table-bordered mt-2">
+          <tr><th>Name</th><th>Quantity</th><th>Actions</th></tr>
+          <tr *ngFor="let asset of assets">
+              <td>{{ asset.name }}</td>
+              <td>{{ asset.quantity }}</td>
+              <td>
+                  <button class="btn btn-warning btn-sm" (click)="openModal('HospitalAsset', asset)">Edit</button>
+                  <button class="btn btn-danger btn-sm" (click)="deleteData('HospitalAsset', asset.id)">Delete</button>
+              </td>
+          </tr>
+      </table>
+
+      <!-- Medicines Table -->
+      <h3>Medicines</h3>
+      <button class="btn btn-primary" (click)="openModal('Medicine')">Add Medicine</button>
+      <table class="table table-bordered mt-2">
+          <tr><th>Name</th><th>Stock</th><th>Price</th><th>Actions</th></tr>
+          <tr *ngFor="let medicine of medicines">
+              <td>{{ medicine.name }}</td>
+              <td>{{ medicine.stock }}</td>
+              <td>{{ medicine.price }}</td>
+              <td>
+                  <button class="btn btn-warning btn-sm" (click)="openModal('Medicine', medicine)">Edit</button>
+                  <button class="btn btn-danger btn-sm" (click)="deleteData('Medicine', medicine.id)">Delete</button>
+              </td>
+          </tr>
+      </table>
+
+      <!-- Popup Modal -->
+      <div *ngIf="showModal" class="modal fade show" tabindex="-1" style="display: block;" aria-modal="true" role="dialog">
+          <div class="modal-dialog">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <h4 class="modal-title">{{ selectedItem.id ? 'Edit ' + entityType : 'Add ' + entityType }}</h4>
+                      <button type="button" class="btn-close" (click)="showModal = false" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                      <form #form="ngForm" (ngSubmit)="saveData(form)">
+                          <div class="mb-3">
+                              <label for="name" class="form-label">Name:</label>
+                              <input type="text" id="name" name="name" [(ngModel)]="selectedItem.name" class="form-control" required />
+                          </div><br>
+                          <div class="mb-3" *ngIf="entityType === 'Hospital'">
+                              <label for="address" class="form-label">Address:</label>
+                              <input type="text" id="address" name="address" [(ngModel)]="selectedItem.address" class="form-control" required />
+                          </div>
+                          <div class="mb-3" *ngIf="entityType === 'HospitalAsset'">
+                              <label for="quantity" class="form-label">Quantity:</label>
+                              <input type="number" id="quantity" name="quantity" [(ngModel)]="selectedItem.quantity" class="form-control" required />
+                              <br><br>
+                                <label for="hospital" class="form-label">Hospital Name:</label>
+                                <select id="hospital" [(ngModel)]="selectedItem.hospitalId" name="hospitalId" required>
+                                  <option *ngFor="let hospital of hospitals" [value]="hospital.id">{{ hospital.name }}</option>
+                                </select>
+                          </div>
+                          <div class="mb-3" *ngIf="entityType === 'Medicine'">
+                              <label for="stock" class="form-label">Stock:</label>
+                              <input type="number" id="stock" name="stock" [(ngModel)]="selectedItem.stock" class="form-control" required />
+                              <br><br>
+                              <label for="price" class="form-label">Price:</label>
+                              <input type="number" id="price" name="price" [(ngModel)]="selectedItem.price" class="form-control" required />
+                              <br><br>
+                              <label for="hospital" class="form-label">Hospital Name:</label>
+                                <select id="hospital" [(ngModel)]="selectedItem.hospitalId" name="hospitalId" class="form-control" required>
+                                  <option *ngFor="let hospital of hospitals" [value]="hospital.id">{{ hospital.name }}</option>
+                                </select>
+                          </div>
+                          <br>
+                          <button type="submit" class="btn btn-success mt-2">Save</button>
+                          <button type="button" class="btn btn-secondary mt-2" (click)="showModal = false">Cancel</button>
+                      </form>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <footer class="footer">
+      <p>&copy;HospEase</p>
+  </footer>
+</body>

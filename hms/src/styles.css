@@ -1,0 +1,31 @@
+/* Default styles (applies to all screens) */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+ 
+/* Responsive for tablets */
+@media (max-width: 1024px) {
+    .container {
+        width: 90%;
+        margin: auto;
+    }
+}
+ 
+/* Responsive for mobile screens */
+@media (max-width: 768px) {
+    .home-banner {
+        padding: 50px 10px;
+        font-size: 1.2em;
+    }
+ 
+    .admin-dashboard, .doctor-dashboard, .patient-dashboard {
+        padding: 10px;
+    }
+ 
+    .login-container, .register-container {
+        width: 90%;
+    }
+}

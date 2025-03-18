@@ -1,0 +1,36 @@
+<div class="register-container">
+    <div class="register-box">
+      <h2>Register</h2>
+      <form [formGroup]="registerForm" (submit)="OnRegister()">
+        <div class="input-group">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" formControlName="name" name="name" required />
+        </div>
+   
+        <div class="input-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" formControlName="email" name="email" required />
+        </div>
+   
+        <div class="input-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" formControlName="password" name="password" required />
+        </div>
+   
+        <div class="input-group">
+          <label for="role">Role</label>
+          <select id="role" formControlName="role" name="role" required>
+            <option value="Admin">Admin</option>
+            <option value="Doctor">Doctor</option>
+            <option value="Patient">Patient</option>
+          </select>
+        </div>
+   
+        <button type="submit" class="btn btn-primary">Register</button>
+      </form>
+   
+      <p class="login-link">
+        Already have an account? <a (click)="navigateToLogin()">Login here</a>
+      </p>
+    </div>
+  </div>

@@ -1,0 +1,509 @@
+[
+  {
+    "ContainingType": "HospEaseHMS.Controllers.AppointmentController",
+    "Method": "BookAppointment",
+    "RelativePath": "api/Appointment",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "HospEaseHMS.DTOs.AppointmentDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HospEaseHMS.Controllers.AppointmentController",
+    "Method": "GetAllAppointments",
+    "RelativePath": "api/Appointment",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HospEaseHMS.Controllers.AppointmentController",
+    "Method": "ConfirmAppointment",
+    "RelativePath": "api/Appointment/confirm/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HospEaseHMS.Controllers.AppointmentController",
+    "Method": "GetAppointmentsForDoctor",
+    "RelativePath": "api/Appointment/doctor/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HospEaseHMS.Controllers.AppointmentController",
+    "Method": "GetAppointmentsForPatient",
+    "RelativePath": "api/Appointment/patient/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HospEaseHMS.Controllers.AuthController",
+    "Method": "GetUsersByRole",
+    "RelativePath": "api/Auth",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "role",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HospEaseHMS.Controllers.AuthController",
+    "Method": "GetUserById",
+    "RelativePath": "api/Auth/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HospEaseHMS.Controllers.AuthController",
+    "Method": "Login",
+    "RelativePath": "api/Auth/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "HospEaseHMS.DTOs.LoginDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HospEaseHMS.Controllers.AuthController",
+    "Method": "Register",
+    "RelativePath": "api/Auth/register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "HospEaseHMS.DTOs.RegisterDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HospEaseHMS.Controllers.ChatbotController",
+    "Method": "GetMedicalInfo",
+    "RelativePath": "api/Chatbot/{query}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "query",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HospEaseHMS.Controllers.HospitalController",
+    "Method": "CreateHospital",
+    "RelativePath": "api/Hospital",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "hospitalDto",
+        "Type": "HospEaseHMS.DTOs.HospitalDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HospEaseHMS.Controllers.HospitalController",
+    "Method": "GetAllHospitals",
+    "RelativePath": "api/Hospital",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HospEaseHMS.Controllers.HospitalController",
+    "Method": "GetHospitalById",
+    "RelativePath": "api/Hospital/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HospEaseHMS.Controllers.HospitalController",
+    "Method": "UpdateHospital",
+    "RelativePath": "api/Hospital/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "updatedHospital",
+        "Type": "HospEaseHMS.DTOs.HospitalDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HospEaseHMS.Controllers.HospitalController",
+    "Method": "DeleteHospital",
+    "RelativePath": "api/Hospital/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HospEaseHMS.Controllers.HospitalAssetController",
+    "Method": "AddAsset",
+    "RelativePath": "api/HospitalAsset",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "hospitalId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "assetDto",
+        "Type": "HospEaseHMS.DTOs.HospitalAssetDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HospEaseHMS.Controllers.HospitalAssetController",
+    "Method": "GetAllAssets",
+    "RelativePath": "api/HospitalAsset",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HospEaseHMS.Controllers.HospitalAssetController",
+    "Method": "UpdateAsset",
+    "RelativePath": "api/HospitalAsset/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "assetDto",
+        "Type": "HospEaseHMS.DTOs.HospitalAssetDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HospEaseHMS.Controllers.HospitalAssetController",
+    "Method": "DeleteAsset",
+    "RelativePath": "api/HospitalAsset/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HospEaseHMS.Controllers.HospitalAssetController",
+    "Method": "GetAssetsByHospital",
+    "RelativePath": "api/HospitalAsset/hospital/{hospitalId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "hospitalId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HospEaseHMS.Controllers.MedicalRecordController",
+    "Method": "CreateMedicalRecord",
+    "RelativePath": "api/MedicalRecord",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "medicalRecordDto",
+        "Type": "HospEaseHMS.DTOs.MedicalRecordDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HospEaseHMS.Controllers.MedicalRecordController",
+    "Method": "GetMedicalRecords",
+    "RelativePath": "api/MedicalRecord/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HospEaseHMS.Controllers.MedicalRecordController",
+    "Method": "GetMedicalRecordsByDoctorId",
+    "RelativePath": "api/MedicalRecord/GetMedicalRecordsByDoctorId/{doctorId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "doctorId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HospEaseHMS.Controllers.MedicalRecordController",
+    "Method": "GetMedicalRecordsByPatientId",
+    "RelativePath": "api/MedicalRecord/GetMedicalRecordsByPatientId/{patientId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "patientId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HospEaseHMS.Controllers.MedicineController",
+    "Method": "AddMedicine",
+    "RelativePath": "api/Medicine",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "hospitalId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "medicineDto",
+        "Type": "HospEaseHMS.DTOs.MedicineDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HospEaseHMS.Controllers.MedicineController",
+    "Method": "GetAllMedicines",
+    "RelativePath": "api/Medicine",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HospEaseHMS.Controllers.MedicineController",
+    "Method": "GetMedicine",
+    "RelativePath": "api/Medicine/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HospEaseHMS.Controllers.MedicineController",
+    "Method": "UpdateMedicine",
+    "RelativePath": "api/Medicine/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "medicineDto",
+        "Type": "HospEaseHMS.DTOs.MedicineDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HospEaseHMS.Controllers.MedicineController",
+    "Method": "DeleteMedicine",
+    "RelativePath": "api/Medicine/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HospEaseHMS.Controllers.MedicineController",
+    "Method": "GetMedicinesByHospital",
+    "RelativePath": "api/Medicine/hospital/{hospitalId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "hospitalId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HospEaseHMS.Controllers.MedicineController",
+    "Method": "PurchaseMedicine",
+    "RelativePath": "api/Medicine/purchase",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "patientId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "medicineId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "quantity",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

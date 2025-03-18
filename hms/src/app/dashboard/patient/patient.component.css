@@ -1,0 +1,234 @@
+body{
+  background: url('https://rescribe.in/blog/wp-content/uploads/2020/10/image-3.jpg') no-repeat center center/cover;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Centered title */
+.text-center {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Table styling */
+.table {
+  width: 100%;
+  margin-bottom: 20px;
+  background-color: #fff;
+}
+
+.table th, .table td {
+  padding: 12px;
+  text-align: left;
+  border-top: 1px solid #dee2e6;
+}
+
+.table th {
+  background-color: #f1f1f1;
+}
+
+.table-bordered {
+  border: 1px solid #dee2e6;
+}
+
+.table-bordered th, .table-bordered td {
+  border: 1px solid #dee2e6;
+}
+
+/* Button styling */
+.btn {
+  margin-right: 5px;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: #007bff;
+}
+
+.btn-warning {
+  background-color: #ffc107;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+}
+
+.btn-success {
+  background-color: #28a745;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+}
+
+/* Modal styling */
+.modal {
+  display: block;
+  position: fixed;
+  z-index: 1050;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  outline: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-dialog {
+  position: relative;
+  margin: 10% auto;
+  max-width: 500px;
+}
+
+.modal-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  pointer-events: auto;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 0.3rem;
+  outline: 0;
+  padding: 20px;
+}
+
+.modal-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 1rem 1rem;
+  border-bottom: 1px solid #dee2e6;
+  border-top-left-radius: 0.3rem;
+  border-top-right-radius: 0.3rem;
+}
+
+.modal-title {
+  margin-bottom: 0;
+  line-height: 1.5;
+}
+
+.modal-body {
+  position: relative;
+  flex: 1 1 auto;
+}
+
+.modal{
+
+ align-items: center;
+  justify-content: flex-end;
+  padding: 1rem;
+  border-top: 1px solid #dee2e6;
+}
+
+.header, .footer {
+  background-color: #343a40;
+  color: white;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.header h1, .footer p {
+  margin: 0;
+}
+
+.inline-sections {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem; /* Adjust the gap as needed */
+}
+
+.medicine-purchase, .appointment-booking {
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  flex: 1; /* Ensures both sections take equal space */
+}
+
+.medicine-purchase h3, .appointment-booking h3 {
+  color: #343a40;
+  margin-bottom: 1rem;
+}
+
+.medicine-purchase label, .appointment-booking label {
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+
+.medicine-purchase select, .medicine-purchase input,
+.appointment-booking select, .appointment-booking input {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+}
+
+.medicine-purchase p {
+  font-weight: bold;
+  color: #28a745;
+  margin-top: 1rem;
+}
+
+.medicine-purchase .btn-primary, .appointment-booking .btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  width: 100%;
+}
+
+.ask-chatbot {
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  margin-top: 1.5rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.ask-chatbot h3 {
+  color: #343a40;
+  margin-bottom: 1rem;
+}
+
+.ask-chatbot textarea {
+  width: 100%;
+  height: 100px;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  resize: vertical;
+}
+
+.ask-chatbot .btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  width: 100%;
+}
+
+.ask-chatbot p {
+  margin-top: 1rem;
+  font-weight: bold;
+  color: #343a40;
+}

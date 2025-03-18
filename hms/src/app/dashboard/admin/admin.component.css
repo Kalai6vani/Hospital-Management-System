@@ -1,0 +1,200 @@
+/* General container styling */
+body{
+  background: url('https://rescribe.in/blog/wp-content/uploads/2020/10/image-3.jpg') no-repeat center center/cover;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Centered title */
+.text-center {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Table styling */
+.table {
+  width: 100%;
+  margin-bottom: 20px;
+  background-color: #fff;
+}
+
+.table th, .table td {
+  padding: 12px;
+  text-align: left;
+  border-top: 1px solid #dee2e6;
+}
+
+.table th {
+  background-color: #f1f1f1;
+}
+
+.table-bordered {
+  border: 1px solid #dee2e6;
+}
+
+.table-bordered th, .table-bordered td {
+  border: 1px solid #dee2e6;
+}
+
+/* Button styling */
+.btn {
+  margin-right: 5px;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+}
+
+.container .btn-primary {
+  background-color: #007bff;
+}
+
+.container .btn-warning {
+  background-color: #ffc107;
+}
+
+.container .btn-danger {
+  background-color: #dc3545;
+}
+
+.modal-body .btn-success {
+  background-color: #28a745;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+}
+
+/* Additional container styling */
+.container-fluid {
+  padding: 0;
+}
+
+.header, .footer {
+  background-color: #343a40;
+  color: white;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.header h1, .footer p {
+  margin: 0;
+}
+
+/* Modal styling */
+.modal {
+  display: block;
+  position: fixed;
+  z-index: 1050;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  outline: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: opacity 0.3s ease-in-out;
+}
+
+.modal-dialog {
+  position: relative;
+  margin: 10% auto;
+  max-width: 600px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.modal-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  pointer-events: auto;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 0.5rem;
+  outline: 0;
+  padding: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1rem;
+  border-bottom: 1px solid #dee2e6;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  background-color: #f8f9fa;
+}
+
+.modal-title {
+  margin-bottom: 0;
+  line-height: 1.5;
+  font-weight: bold;
+}
+
+.btn-close {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+}
+
+.modal-body {
+  position: relative;
+  flex: 1 1 auto;
+  padding: 1rem;
+  justify-content: center; /* Centers content horizontally */
+  align-items: center;    /* Centers content vertically */
+  text-align: center; 
+}
+
+.modal-footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 1rem;
+  border-top: 1px solid #dee2e6;
+  background-color: #f8f9fa;
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+
+.form-label {
+  font-weight: bold;
+}
+
+.form-control {
+  border-radius: 0.25rem;
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
+.btn-success {
+  background-color: #28a745;
+  border-color: #28a745;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+}
+
+.btn{
+
+background-color: #6c757d;
+  border-color: #6c757d;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+}
+
+.modal-body #hospital{
+  width: 40%;
+  height: calc(1.5em + .75rem + 2px);
+}

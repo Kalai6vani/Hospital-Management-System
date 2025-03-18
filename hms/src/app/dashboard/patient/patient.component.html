@@ -1,0 +1,124 @@
+<body>
+<header class="header">
+  <h1>HospEase Patient Dashboard</h1>
+</header>
+
+<div class="container">
+  <h2>Welcome, {{ patient.name }}</h2>
+  <button class="btn btn-danger" (click)="logout()">Logout</button>
+  
+  <!-- Medical Records -->
+  <h3>Past Medical Records</h3>
+  <table class="table table-bordered mt-2" border="1">
+    <thead>
+      <tr>
+        <th>Diagnosis</th>
+        <th>Feedback</th>
+        <th>Doctor</th>
+        <th>Doctor Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let record of medicalRecords">
+        <td>{{ record.diagnosis }}</td>
+        <td>{{ record.prescription }}</td>
+        <td>Dr. {{ record.doctor?.name }}</td>
+        <td>{{ record.doctor?.email }}</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <div class="inline-sections">
+    <!-- Medicine Purchase -->
+    <div class="medicine-purchase">
+      <h3>Buy Medicine</h3>
+      <div>
+        <label>Select Medicine:</label>
+        <select [(ngModel)]="selectedMedicine" (change)="onMedicineSelect()" class="form-control custom-dropdown">
+          <option *ngFor="let med of medicines" [ngValue]="med">{{ med.name }} - ₹{{ med.price }}</option>
+        </select>
+      </div>
+      <br>
+      <div>
+        <label>Quantity:</label>
+        <input type="number" [(ngModel)]="quantity" (change)="onMedicineSelect()" min="1" class="form-control custom-input">
+      </div>
+      <p>Total Bill: ₹{{ billAmount }}</p>
+      <button class="btn btn-primary" (click)="buyMedicine()">Buy</button>
+    </div>
+  
+    <!-- Appointment Booking -->
+    <div class="appointment-booking">
+      <h3>Book Appointment</h3>
+      <div>
+        <label>Date:</label>
+        <input type="date" [(ngModel)]="appointmentDetails.date" class="form-control custom-input">
+      </div>
+      <br>
+      <div>
+        <label>Select Doctor:</label>
+        <select [(ngModel)]="appointmentDetails.doctorId" class="form-control custom-dropdown">
+          <option *ngFor="let doctor of doctors" [ngValue]="doctor.id">Dr. {{ doctor.name }}</option>
+        </select>
+      </div>
+      <br>
+      <button class="btn btn-primary" (click)="bookAppointment()">Book Appointment</button>
+    </div>
+  </div>
+
+  <br>
+  <!--View Scheduled Appointments-->
+  <h3>Scheduled Appointments</h3>
+    <table class="table table-bordered">
+      <thead class="thead-dark">
+        <tr>
+          <th>Doctor Name</th>
+          <th>Appointment Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let appointment of appointments">
+          <td>Dr. {{ appointment.doctorName }}</td>
+          <td>{{ appointment.appointmentDate }}</td>
+        </tr>
+      </tbody>
+    </table>
+  
+  <!-- Chatbot -->
+  <div class="ask-chatbot">
+  <h3>Ask Chatbot</h3>
+  <textarea [(ngModel)]="chatbotQuery" placeholder="Ask the chatbot"></textarea>
+  <br>
+  <button class="btn btn-primary" (click)="askChatbot()">Ask</button>
+  <p><strong>Chatbot Response:</strong> {{ chatbotResponse }}</p>
+</div>
+
+  <!-- Bill Modal -->
+  <div *ngIf="showBillModal" class="modal">
+    <div class="modal-content">
+      <span class="close" (click)="closeBillModal()">&times;</span>
+      <h2>Bill Details</h2>
+      <p>Medicine: {{ selectedMedicine.name }}</p>
+      <p>Price: {{selectedMedicine.price}}</p>
+      <p>Quantity: {{ quantity }}</p>
+      <p>Total Bill: ₹{{ billAmount }}</p>
+    </div>
+  </div>
+
+  <!-- Appointment Modal -->
+  <div *ngIf="showAppointmentModal" class="modal">
+    <div class="modal-content">
+      <span class="close" (click)="closeAppointmentModal()">&times;</span>
+      <h2>Appointment Details</h2>
+      <p>Patient Name: {{ patient.name }}</p>
+      <p>Doctor Name: {{ selectedDoctor?.name }}</p>
+      <p>Appointment Date: {{ appointmentDetails.date }}</p>
+    </div>
+  </div>
+
+</div>
+
+<footer class="footer">
+  <p>&copy;HospEase</p>
+</footer>
+</body>

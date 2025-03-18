@@ -1,0 +1,72 @@
+<body> 
+  <header class="header"> 
+    <h1>HospEase Doctor Dashboard</h1> 
+  </header> <div class="container mt-5"> 
+    <h2 class="mb-4">Welcome, Dr. {{ doctor.name }}</h2> 
+    <button class="btn btn-danger" (click)="logout()">Logout</button> 
+    
+    <!-- Scheduled Appointments --> 
+     <h3>Scheduled Appointments</h3> 
+     <table class="table table-bordered"> 
+      <thead class="thead-dark"> 
+        <tr> 
+          <th>Patient Name</th> 
+          <th>Appointment Date</th> 
+          <th>Status</th> 
+          <th>Actions</th> 
+        </tr> 
+      </thead> 
+      <tbody> 
+        <tr *ngFor="let appointment of scheduledAppointments"> 
+          <td>{{ appointment.patientName }}</td> 
+          <td>{{ appointment.appointmentDate }}</td> 
+          <td>{{ appointment.status }}</td> 
+          <td> 
+            <button class="btn btn-success" (click)="completeAppointment(appointment.id)" [disabled]="appointment.status === 'completed'">Complete</button> 
+            <button class="btn btn-primary" (click)="openRecordModal(appointment)">Provide Record</button> 
+          </td> 
+        </tr> 
+      </tbody> 
+    </table> 
+    
+    <!-- Past Appointments --> 
+     <h3>Past Appointments</h3> 
+     <table class="table table-bordered"> 
+      <thead class="thead-dark"> 
+        <tr> 
+          <th>Patient Name</th> 
+          <th>Appointment Date</th> 
+          <th>Status</th> 
+        </tr> 
+      </thead> 
+      <tbody> 
+        <tr *ngFor="let appointment of pastAppointments"> 
+          <td>{{ appointment.patientName }}</td> 
+          <td>{{ appointment.appointmentDate }}</td> 
+          <td>{{ appointment.status }}</td> 
+        </tr> 
+      </tbody> 
+    </table> 
+    
+    <!-- Record Modal --> 
+     <div *ngIf="showRecordModal" class="modal"> 
+      <div class="modal-content"> 
+        <span class="close" (click)="closeRecordModal()">&times;</span> 
+        <h2>Provide Medical Record</h2> 
+        <form (ngSubmit)="provideRecord()"> 
+          <div class="form-group"> 
+            <label for="diagnosis">Diagnosis:</label> 
+            <input type="text" id="diagnosis" [(ngModel)]="diagnosis" name="diagnosis" class="form-control" required> 
+          </div> 
+          <div class="form-group"> 
+            <label for="prescription">Prescription:</label> 
+            <input type="text" id="prescription" [(ngModel)]="prescription" name="prescription" class="form-control" required> 
+          </div> 
+          <button type="submit" class="btn btn-primary">Submit</button> 
+          <button type="button" class="btn btn-secondary" (click)="closeRecordModal()">Cancel</button> 
+        </form> 
+      </div> 
+    </div> 
+  </div> 
+  <footer class="footer"> <p>&copy;HospEase</p> </footer> 
+</body>
